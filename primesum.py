@@ -1,5 +1,5 @@
 total = 0
-lastPrimeISaw = 2
+lastPrime = 2
 for n in range(3, 1001):
 	tests = range(2, n - 1)
 	prime = True
@@ -8,6 +8,7 @@ for n in range(3, 1001):
 			prime = False
 	
 	if prime == True:
-		total = total + n
+		total = total + ( n - lastPrime )
+		lastPrime = n
 
 print total
